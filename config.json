@@ -1,15 +1,27 @@
 [
   {
     "device": 1,
-    "name": "SIKG-VD",
-    "endpoint": "http://192.168.3.222:80/xmldata.asmx",
-    "comment": "test"
+    "name": "СИКГ-ТГ",
+    "endpoint": "http://192.168.1.130:80/xmldata.asmx",
+    "comment": "Трубопровод 1 - СИКГ ТГ-1, Трубопровод 2 - СИКГ ТГ-2"
   },
   {
     "device": 2,
-    "name": "SIKG-ND",
-    "endpoint": "http://192.168.3.221:80/xmldata.asmx",
-    "comment": "test2"
+    "name": "СИКГ-ВД",
+    "endpoint": "http://192.168.1.131:80/xmldata.asmx",
+    "comment": "Трубопровод 1 - СИКГ ВД"
+  },
+  {
+    "device": 3,
+    "name": "СИКГ-ТГ",
+    "endpoint": "http://192.168.1.132:80/xmldata.asmx",
+    "comment": "Трубопровод 1 - СИКГ НД"
+  },
+  {
+    "device": 99,
+    "name": "Тестовый прибор",
+    "endpoint": "http://192.168.3.222:80/xmldata.asmx",
+    "comment": "test"
   }
 ]
 
