@@ -21,7 +21,7 @@ func GetArchiveByDeviceAndPipe(method string, device string, pipe string, startT
 	deviceId, _ := strconv.Atoi(device)
 	endpoint := getEndpointFromDevice(deviceId)
 	var requestBody = new(xmlData.ArchiveRequest)
-	fillArchiveRequest(requestBody, "1", "2024-05-20T10:00:00.000", "2024-05-20T12:00:00.000")
+	fillArchiveRequest(requestBody, pipe, startTime, endTime)
 	data, err := xml.Marshal(requestBody)
 
 	req, err := http.NewRequest(method, endpoint, bytes.NewBuffer(data))
