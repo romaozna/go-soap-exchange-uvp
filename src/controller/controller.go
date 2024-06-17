@@ -11,6 +11,7 @@ import (
 	"main/src/service"
 	"net/http"
 	"slices"
+	"strconv"
 )
 
 func GetStatus(w http.ResponseWriter, r *http.Request) {
@@ -66,9 +67,12 @@ func GetArchive(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetDevices(w http.ResponseWriter, r *http.Request) {
-
+	marshal, _ := json.Marshal(service.GetConfig())
+	w.Write([]byte(marshal))
 }
 
 func GetDeviceById(w http.ResponseWriter, r *http.Request) {
-
+	deviceId, _ := strconv.Atoi(chi.URLParam(r, "deviceId"))
+	marshal, _ := json.Marshal(service.GetDeviceById(deviceId))
+	w.Write([]byte(marshal))
 }

@@ -36,7 +36,7 @@ func main() {
 	r.Get("/", controller.GetStatus)
 	r.Get("/api/v0/archive/{deviceId}/{pipeId}", controller.GetArchive)
 	r.Get("/api/v0/devices/", controller.GetDevices)
-	r.Get("/api/v0/devices/{deviceId}/", controller.GetDeviceById)
+	r.Get("/api/v0/devices/{deviceId}", controller.GetDeviceById)
 
 	serverPort := getPort()
 	log.Println(fmt.Sprintf("Адрес сервера: %d", serverPort))
