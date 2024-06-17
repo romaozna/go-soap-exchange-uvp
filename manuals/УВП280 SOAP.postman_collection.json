@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "<UVPinfo> \r\n<GetArchives> \r\n<Options ReturnMeasure=\"1\" ReturnHeader=\"0\" ReturnComment=\"1\" UserMeasure=\"0\" \r\nStartTime=\"2024-05-12T20:00:00.000\" \r\nStopTime=\"2024-05-12T22:00:00.000\" \r\nPipeNumber=\"1\" /> \r\n</GetArchives> \r\n</UVPinfo> "
+					"raw": "<UVPinfo> \r\n<GetArchives> \r\n<Options ReturnMeasure=\"1\" ReturnHeader=\"0\" ReturnComment=\"1\" UserMeasure=\"0\" \r\nStartTime=\"2024-05-12T20:00:00.000\" \r\nStopTime=\"2024-05-16T22:00:00.000\" \r\nPipeNumber=\"1\" /> \r\n</GetArchives> \r\n</UVPinfo> "
 				},
 				"url": {
 					"raw": "192.168.3.222:80/xmldata.asmx",
@@ -37,7 +37,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7540/api/v0/archive/1/1?startTime=2024-05-20T10:00:00.000&endTime=2024-05-20T12:00:00.000",
+					"raw": "http://localhost:7540/api/v0/archive/1/1?startTime=2024-05-20T10:00:00.000&endTime=2024-05-18T12:00:00.000",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -57,7 +57,7 @@
 						},
 						{
 							"key": "endTime",
-							"value": "2024-05-20T12:00:00.000"
+							"value": "2024-05-18T12:00:00.000"
 						}
 					]
 				}
@@ -70,7 +70,23 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:7540/api/v0/archive/1/1?startTime=2024-05-20T10:00:00.000&endTime=2024-05-20T12:00:00.000",
+					"raw": "http://localhost:7540",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7540"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7540/api/v0/devices/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -79,19 +95,30 @@
 					"path": [
 						"api",
 						"v0",
-						"archive",
-						"1",
-						"1"
+						"devices",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all devices Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7540/api/v0/devices/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
 					],
-					"query": [
-						{
-							"key": "startTime",
-							"value": "2024-05-20T10:00:00.000"
-						},
-						{
-							"key": "endTime",
-							"value": "2024-05-20T12:00:00.000"
-						}
+					"port": "7540",
+					"path": [
+						"api",
+						"v0",
+						"devices",
+						"1"
 					]
 				}
 			},
