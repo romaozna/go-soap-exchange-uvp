@@ -1,0 +1,16 @@
+[
+  {
+    "device": 1,
+    "name": "SIKG-VD",
+    "endpoint": "http://192.168.3.222:80/xmldata.asmx",
+    "comment": "test"
+  },
+  {
+    "device": 2,
+    "name": "SIKG-ND",
+    "endpoint": "http://192.168.3.221:80/xmldata.asmx",
+    "comment": "test2"
+  }
+]
+
+

@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "395f988c-6408-4ef9-a2be-f3ec23519ce5",
+		"name": "УВП280 SOAP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24127020"
+	},
+	"item": [
+		{
+			"name": "get archive from UVP directly",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<UVPinfo> \r\n<GetArchives> \r\n<Options ReturnMeasure=\"1\" ReturnHeader=\"0\" ReturnComment=\"1\" UserMeasure=\"0\" \r\nStartTime=\"2024-05-12T20:00:00.000\" \r\nStopTime=\"2024-05-12T22:00:00.000\" \r\nPipeNumber=\"1\" /> \r\n</GetArchives> \r\n</UVPinfo> "
+				},
+				"url": {
+					"raw": "192.168.3.222:80/xmldata.asmx",
+					"host": [
+						"192",
+						"168",
+						"3",
+						"222"
+					],
+					"port": "80",
+					"path": [
+						"xmldata.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get archive from device 1 and pipe 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7540/api/v0/archive/1/1?startTime=2024-05-20T10:00:00.000&endTime=2024-05-20T12:00:00.000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7540",
+					"path": [
+						"api",
+						"v0",
+						"archive",
+						"1",
+						"1"
+					],
+					"query": [
+						{
+							"key": "startTime",
+							"value": "2024-05-20T10:00:00.000"
+						},
+						{
+							"key": "endTime",
+							"value": "2024-05-20T12:00:00.000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get status OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7540/api/v0/archive/1/1?startTime=2024-05-20T10:00:00.000&endTime=2024-05-20T12:00:00.000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7540",
+					"path": [
+						"api",
+						"v0",
+						"archive",
+						"1",
+						"1"
+					],
+					"query": [
+						{
+							"key": "startTime",
+							"value": "2024-05-20T10:00:00.000"
+						},
+						{
+							"key": "endTime",
+							"value": "2024-05-20T12:00:00.000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
