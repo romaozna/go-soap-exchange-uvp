@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="xmliogateway" type="GoApplicationRunConfiguration" factoryName="Go Application">
+    <module name="go-soap-exchange-uvp" />
+    <working_directory value="$PROJECT_DIR$" />
+    <go_parameters value="-ldflags -H=windowsgui" />
+    <useCustomBuildTags value="true" />
+    <envs>
+      <env name="GOOS" value="windows" />
+      <env name="GOARCH" value="386" />
+    </envs>
+    <kind value="PACKAGE" />
+    <package value="main" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$/main.go" />
+    <output_directory value="$PROJECT_DIR$/Output" />
+    <method v="2" />
+  </configuration>
+</component>

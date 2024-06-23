@@ -12,11 +12,15 @@ import (
 	"net/http"
 	"slices"
 	"strconv"
+	"time"
 )
 
 func GetStatus(w http.ResponseWriter, r *http.Request) {
+	seconds := time.Now().Unix()
+	data, _ := json.Marshal(seconds)
+	log.Println("Status:", data)
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte("OK"))
+	w.Write([]byte(data))
 }
 
 func GetArchive(w http.ResponseWriter, r *http.Request) {

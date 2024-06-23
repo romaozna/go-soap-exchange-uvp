@@ -31,7 +31,7 @@ func GetArchiveByDeviceAndPipe(method string, device string, pipe string, startT
 
 	response, err := client.Do(req)
 	if err != nil {
-		log.Fatalf("Error sending request to API endpoint. %+v", err)
+		log.Printf("Error sending request to API endpoint. %+v\n", err)
 	}
 
 	// Close the connection to reuse it
@@ -82,6 +82,6 @@ func fillArchiveRequest(r *xmlData.ArchiveRequest, pipe string, startTime string
 }
 
 func httpClient() *http.Client {
-	client := &http.Client{Timeout: 10 * time.Second}
+	client := &http.Client{Timeout: 20 * time.Second}
 	return client
 }
